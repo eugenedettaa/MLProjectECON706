@@ -1,0 +1,187 @@
+#### Set configuration values for your username and email
+
+git config --global user.name Eugène Dettaa
+git config --global user.email edettaa@statlogeconometrics.com
+
+
+
+#### Définir le cd
+cd "C:\Users\EugèneDettaa\OneDrive - Statlog consulting\07_Projet_Git"
+
+
+
+#### Interroger le cd 
+pwd
+
+
+
+#### Version de Git
+$ git --version
+git version 2.45.0.windows.1
+
+
+
+#### Obtenir la liste des fichiers du cd
+
+ls
+
+
+#### Initialiser un projet (initialiser le dépôt)
+
+git init
+
+
+
+#### Pour connaitre l'état du suivi des modifications
+
+git status
+
+
+
+#### Ajouter une modification a la zone d'indexation (i.e. le préparer le fichier à être commit)
+
+git add rscript_test.R
+
+git add git_commands.txt
+
+git add . (pour ajouter tous les fichiers modifiés)
+
+
+
+
+#### Retirer un fichier de la zone d’indexation
+#git restore --staged nom_du_fichier
+#git restore --staged git_commands.txt
+
+
+
+
+
+#### Quitter de la zone d'indexation à la zone d'historisation (i.e. commit)
+
+git commit -m "Ajout de la version initiale des trois fichiers principaux"
+
+
+
+#### Nettoyer la ligne de commande
+clear
+
+
+
+#### Ajout de fichiers ou versions additionnelles
+
+git add donnees_PIB_chomage_CA_QC.csv
+
+git commit -m "Ajout du fichier de données csv"
+
+git add git_commands.txt
+
+git commit -m "Première mise à jour de git_commands"
+
+
+#### Obtenir l'ensemble des commits
+git log
+
+
+
+
+#### Se positionner sur un commit spécifique
+git checkout 62b61979c4b4a4c89ac4b4d9dd8c012aef074eb6
+
+
+
+#### Cloner en local un dossier logé sur GitHub (protocol HTTPS)
+git clone https://github.com/eugenedettaa/Test.git
+
+
+
+
+
+#### Cloner en local un dossier logé sur GitHub (Clé SSH)
+
+## Generating a new SSH key (private + public)
+ssh-keygen -t ed25519 -C "edettaa@statlogeconometrics.com"
+
+## Enter file in which to save the key 
+C:\Users\EugèneDettaa\OneDrive - Statlog consulting\07_Projet_Git\.ssh\id_ed25519
+
+## Visualiser le contenu de la clé publique
+cat "C:\Users\EugèneDettaa\OneDrive - Statlog consulting\07_Projet_Git\.ssh\id_ed25519.pub"
+
+
+
+
+
+#### Connecter la clé SSH publique au compte GitHub (Dans les paramètres de GitHub)
+
+
+
+
+
+#### Ajouter la clé SSH à l'agent [L'agent SSH est un petit programme qui stocke en mémoire ta clé privée SSH pendant ta session. Cela évite de devoir entrer ton mot de passe ou recharger ta clé à chaque commande Git (comme git clone, git push, etc.)]
+
+## Démarrer l’agent SSH 
+eval "$(ssh-agent -s)"
+
+## Ajout de la clé
+ssh-add "/c/Users/EugèneDettaa/OneDrive - Statlog consulting/07_Projet_Git/.ssh/id_ed25519"
+
+## Tester la connexion à GitHub
+ssh -T git@github.com
+
+
+
+
+
+#### Connecter GitHub distant et Git en local (clonage par protocol SSH)
+git clone git@github.com:eugenedettaa/MLProjectECON706.git
+
+
+
+
+#### Push les modifications apportées au dossier MLProjectECON706 vers GitHub
+
+## Se positionner dans le dossier d'intérêt 
+ cd ./MLProjectECON706
+
+## Status
+git status
+
+## Add
+git add .
+
+## Commit
+git commit -m "Ajout du script R"
+
+## Push (pas besoin de mot de  passe lorsqu'on utilise le protocol SSH)
+git push
+
+
+
+
+
+#### Pull les modifications apportées sur GitHub (Serveur) vers le repertoire local 
+
+
+
+
+
+####
+
+
+
+####
+
+
+
+
+####
+
+
+
+####
+
+
+
+
+####
